@@ -1,6 +1,6 @@
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace LearningCenter.API.Learning.Resources;
+namespace LearningCenter.API.GettingBetter_System.Resources;
 
 public class CoachResource
 {

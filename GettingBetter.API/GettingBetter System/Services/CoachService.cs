@@ -1,10 +1,13 @@
+using LearningCenter.API.GettingBetter_System.Domain.Repositories;
+using LearningCenter.API.GettingBetter_System.Domain.Services;
+using LearningCenter.API.GettingBetter_System.Domain.Services.Communication;
 using LearningCenter.API.Learning.Domain.Models;
-using LearningCenter.API.Learning.Domain.Repositories;
+
 using LearningCenter.API.Learning.Domain.Services;
 using LearningCenter.API.Learning.Domain.Services.Communication;
 using LearningCenter.API.Shared.Domain.Repositories;
 
-namespace LearningCenter.API.Learning.Services;
+namespace LearningCenter.API.GettingBetter_System.Services;
 
 public class CoachService : ICoachService
 {

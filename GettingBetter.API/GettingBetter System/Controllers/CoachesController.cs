@@ -1,13 +1,14 @@
 using System.Net.Mime;
 using AutoMapper;
+using LearningCenter.API.GettingBetter_System.Domain.Services;
+using LearningCenter.API.GettingBetter_System.Resources;
 using LearningCenter.API.Learning.Domain.Models;
 using LearningCenter.API.Learning.Domain.Services;
-using LearningCenter.API.Learning.Resources;
 using LearningCenter.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace LearningCenter.API.Learning.Controllers;
+namespace LearningCenter.API.GettingBetter_System.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
@@ -46,9 +47,9 @@ public class CoachesController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
 
-        var category = _mapper.Map<SaveCoachResource, Coach>(resource);
+        var coach = _mapper.Map<SaveCoachResource, Coach>(resource);
 
-        var result = await _coachService.SaveAsync(category);
+        var result = await _coachService.SaveAsync(coach);
 
         if (!result.Success)
             return BadRequest(result.Message);
@@ -64,8 +65,8 @@ public class CoachesController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
-        var category = _mapper.Map<SaveCoachResource, Coach>(resource);
-        var result = await _coachService.UpdateAsync(id, category);
+        var coach = _mapper.Map<SaveCoachResource, Coach>(resource);
+        var result = await _coachService.UpdateAsync(id, coach);
         
         if (!result.Success)
             return BadRequest(result.Message);

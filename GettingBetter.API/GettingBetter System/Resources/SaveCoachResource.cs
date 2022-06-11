@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace LearningCenter.API.Learning.Resources;
+namespace LearningCenter.API.GettingBetter_System.Resources;
 
 [SwaggerSchema(Required = new []{"FirstName","LastName","SelectedGame","NickName","Email","Password"})]
 

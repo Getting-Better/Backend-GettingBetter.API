@@ -1,6 +1,6 @@
 using LearningCenter.API.Learning.Domain.Models;
 
-namespace LearningCenter.API.Learning.Domain.Repositories;
+namespace LearningCenter.API.GettingBetter_System.Domain.Repositories;
 
 public interface ICoachRepository
 {

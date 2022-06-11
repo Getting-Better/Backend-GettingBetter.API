@@ -1,6 +1,7 @@
+using LearningCenter.API.GettingBetter_System.Resources;
 using LearningCenter.API.Learning.Domain.Models;
 
-namespace LearningCenter.API.Learning.Resources;
+namespace LearningCenter.API.GettingBetter_System.Resources;
 
 public class StudentResource
 {
